@@ -12,4 +12,4 @@ dotenv.config({ path: './config.env' });
 
 app.use(require('./router/route'));
 
-app.listen(process.env.PORT || 3001);
+app.listen(process.env.PORT || 8080);
