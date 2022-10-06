@@ -7,7 +7,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const db=require('./db/config');
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
 
 app.use(require('./router/route'));
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
